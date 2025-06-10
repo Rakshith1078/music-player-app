@@ -1,0 +1,263 @@
+/* style.css */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.player-container {
+  background: #1e272e;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  width: 300px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+.song-info h2,
+.song-info p {
+  margin: 0.5rem 0;
+}
+
+.controls button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  margin: 0 1rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.controls button:hover {
+  transform: scale(1.2);
+}
+
+.progress-container,
+.volume-container {
+  margin-top: 1rem;
+}
+
+input[type="range"] {
+    width:100%; 
+}
+
+.extra-controls {
+  margin-top: 1rem;
+}
+
+.extra-controls button {
+  background: none;
+  border: 2px solid white;
+  color: white;
+  padding: 0.3rem 1rem;
+  font-size: 1.2rem;
+  margin: 0 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.extra-controls button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.album-art-container {
+  margin: 1rem auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#album-art {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.5s linear;
+}
+
+.rotate {
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.time-info {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.toggle-dark-mode {
+  margin-top: 1rem;
+}
+
+#dark-mode-toggle {
+  padding: 0.5rem 1rem;
+  background: white;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+body.dark {
+  background: linear-gradient(135deg, #000000, #2c3e50);
+  color: white;
+}
+
+body.dark .player-container {
+  background: #111;
+}
+
+body.dark #dark-mode-toggle {
+  background: #fff;
+  color:#000;
+}
+
+.advanced-controls {
+  margin-top: 1rem;
+}
+
+.advanced-controls button {
+  background: none;
+  border: 2px solid white;
+  color: white;
+  padding: 0.2rem 1rem;
+  font-size: 1rem;
+  margin: 0 0.5rem;
+  border-radius: 1px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.advanced-controls button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.upload-controls {
+  margin-top: 1rem;
+}
+
+.upload-controls button {
+  background: none;
+  border: 2px solid white;
+  color: white;
+  padding: 0.2rem 1rem;
+  font-size: 1rem;
+  margin: 0 0.5rem;
+  border-radius: 1px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.upload-controls button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Playlist panel */
+#playlist-panel {
+  position: fixed;
+  top: 10%;
+  right: -300px;
+  width: 250px;
+  transition: right 0.4s ease ;
+  max-height: 80vh;
+  background: #222;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  padding: 1rem;
+  overflow-y: auto;
+  color: white;
+  z-index: 1000;
+  box-shadow: 0 0 15px #3498db;
+}
+
+#playlist-panel.show {
+  right: 10px;
+}
+
+#playlist-panel h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#playlist-panel button#close-playlist {
+  float: right;
+  background: none;
+  border: none;
+  color: #3498db;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+#playlist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+#playlist::-webkit-scrollbar {
+  width: 6px;
+}
+
+#playlist::-webkit-scrollbar-thumb {
+  background-color: #3498db;
+  border-radius: 3px;
+}
+
+#playlist li.active {
+  background-color: #3498db;
+  font-weight: bold;
+  color: white;
+}
+
+#playlist li.active::before {
+  content: "▶";
+  color: #fff;
+}
+
+body,
+.player-container,
+button,
+#playlist li { 
+ transition: all0.3s ease;
+}
+
+#playlist li {
+  padding: 0.5rem;
+  border-bottom: 1px solid #444;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#playlist li:hover {
+  background:#3498db;
+}
+
+@media (max-width: 600px) {
+  #playlist-panel {
+    width: 90%;
+    right: -100%;
+  }
+
+  #playlist-panel.show {
+    right:5%;
+  }
+  }

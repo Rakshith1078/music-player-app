@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Music Player</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icons/favicon.ico" type="image/x-icon"/>
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="theme-color" content="#1db954" />
+</head>
+<body>
+  <div class="player-container">
+    <div class="toggle-dark-mode">
+    <button id="dark-mode-toggle">🌙 Dark Mode</button>
+    </div>
+    
+    <h1> Music Player 🎵</h1>
+    <div class="song-info">
+      <h2 id="title">Song Title</h2>
+      <p id="artist">Artist Name</p>
+    </div>
+    <audio id="audio" src="songs/song1.mp3"></audio>
+
+    <div class="album-art-container">
+    <img id="album-art" src="images/album.jpg" alt="Album Art" />
+    onerror="this.src='images/default.jpg';"
+    </div>
+
+    <div class="controls">
+      <button id="prev">⏮</button>
+      <button id="play">▶</button>
+      <button id="next">⏭</button>
+    </div>
+
+    <div class="progress-container">
+      <input type="range" id="progress" min="0" max="100" step="1"/>
+    </div>
+
+    <div class="volume-container">
+      Volume: <input type="range" id="volume" min="0" max="1" step="0.01" />
+    </div>
+
+    <div class="time-info">
+      <span id="current-time">0:00</span> /
+      <span id="duration">0:00</span>
+    </div>
+     
+    <div class="extra-controls">
+     <button id="shuffle">🔀</button>
+     <button id="repeat">🔁</button>
+    </div>
+
+    <div class="advanced-controls">
+    <button id="mymusic">🎵 My Music</button>
+    <button id="download">⬇ Download</button>
+    </div>
+
+    <div class="upload-controls">
+    <button id="uploadBtn">📂 Upload Songs</button>
+    <input type="file" id="fileUpload" multiple accept="audio/*" style="display: none;"/>
+    </div>
+
+    <!-- Add this inside your .player-container, near the end -->
+<div id="playlist-panel" class="hidden">
+  <button id="close-playlist">✖ Close</button>
+  <h3>My Music Playlist</h3>
+  <ul id="playlist"></ul>
+</div>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>

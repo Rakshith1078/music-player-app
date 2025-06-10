@@ -1,0 +1,35 @@
+{
+  "name": "R Music Player",
+  "short_name": "R Music",
+    "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#1db954",
+  "orientation": "portrait",
+  "scope": "./",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+],
+"screenshots": [
+  {
+    "src": "screenshots/screenshot1.png",
+    "sizes": "1279x646",
+    "type": "image/png",
+    "form_factor": "wide"
+  },
+  {
+    "src": "screenshots/screenshot2.png",
+    "sizes": "388x649",
+    "type": "image/png"
+  }
+]
+}
