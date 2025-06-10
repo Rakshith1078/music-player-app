@@ -25,7 +25,7 @@ A sleek and customizable music player built using HTML, CSS, and JavaScript. Thi
 
 1. Clone the Repository
    ```bash
-   git clone https://github.com/your-username/music-player-app.git
+   git clone https://github.com/Rakshith1078/music-player-app.git
    cd music-player-app
 
 2. Open in Browser
