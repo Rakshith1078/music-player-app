@@ -32,9 +32,9 @@ A sleek and customizable music player built using HTML, CSS, and JavaScript. Thi
 Just double-click index.html or use Live Server in VSCode.
 
 # Tech Stack
-Frontend: HTML5, CSS3, Vanilla JavaScript
-PWA: manifest.json, service-worker.js
-Storage: localStorage API
+1. Frontend: HTML5, CSS3, Vanilla JavaScript
+2. PWA: manifest.json, service-worker.js
+3. Storage: localStorage API
 
 # 📄 License
 This project is open source and available under the MIT License.
