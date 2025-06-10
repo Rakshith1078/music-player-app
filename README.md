@@ -39,3 +39,8 @@ Storage: localStorage API
 # 📄 License
 This project is open source and available under the MIT License.
 
+# 👨‍💻 Author
+Developed by Rakshith N Rakshith 🔗 GitHub Profile
+
+# For learning and academic purposes.
+
