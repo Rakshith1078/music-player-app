@@ -18,7 +18,7 @@ A sleek and customizable music player built using HTML, CSS, and JavaScript. Thi
 
 # 🚀 Live Demo
 
-> [🔗 Click Here to View Live (GitHub Pages/Netlify/Vercel link)](https://your-deployment-link.com)
+> 🔗 Click Here to View Live:https://rakshith1078.github.io/music-player-app/
 
 
 # 📦 How to Run Locally
